@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#111513"/>
+<rect x="45" y="45" width="1110" height="540" rx="18" fill="#161c18" stroke="#303b33"/>
+<circle cx="960" cy="315" r="150" fill="none" stroke="#395342"/>
+<svg x="800" y="155" width="320" height="320" viewBox="0 0 500 500"><path fill="#01BC61" fill-rule="evenodd" d="
+    M 321.71 316
+    A 133.48 136.03 0 1 0 179.78 316
+    C 163 339 155.5 371 155.5 396
+    C 155.5 422 165 435 185 435
+    H 317
+    C 337 435 345.5 422 345.5 396
+    C 345.5 371 337 339 321.71 316 Z
+    M 349.4 190.97
+    A 99.93 96.86 0 1 0 149.54 190.97
+    A 99.93 96.86 0 1 0 349.4 190.97 Z"/>
+  <path fill="#0AB763" d="M 250 118 L 267 155 L 305 172.5 L 267 190 L 250 227 L 233 190 L 195 172.5 L 233 155 Z"/>
+</svg>
+<g font-family="Arial, sans-serif"><text x="90" y="160" fill="#29d780" font-size="26" letter-spacing="4">JIBO COMMUNITY SOFTWARE</text>
+<text x="85" y="275" fill="#eef1ec" font-size="92" font-weight="700">5x1.</text>
+<text x="90" y="360" fill="#eef1ec" font-size="44">A home for the</text>
+<text x="90" y="417" fill="#29d780" font-size="52" font-weight="700">BEcosystem.</text>
+<text x="90" y="525" fill="#b0bbb2" font-size="23">Conversations · Skills · Updates · Setup</text></g></svg>
