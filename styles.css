@@ -150,3 +150,11 @@ nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 
 @keyframes feature-upright { from { transform: rotate(calc(-1 * var(--angle))); } to { transform: rotate(calc(-1 * var(--angle) - 360deg)); } }
 @media (prefers-reduced-motion: reduce) { .feature-ring, .feature-counter { animation: none; } .feature-orb, .orb-copy { transition: none; } .orbit-toggle { display: none; } }
 @media (max-width: 1000px) and (min-width: 701px) { .feature-art { padding: 16px; } .feature-art .art-label { font-size: 8px; } }
+
+/* Portal entry in the shared header. */
+.header nav { align-items: center; }
+.header nav .portal-button { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 8px 14px; border: 1px solid var(--green); border-radius: 5px; color: var(--green); }
+.header nav .portal-button:hover { background: var(--green); color: #0d2015; }
+.header nav .portal-button span { margin: 0; }
+@media (max-width: 700px) { .header nav { gap: 14px; } .header nav .portal-button { min-height: 36px; padding: 7px 11px; } }
+@media (max-width: 380px) { .header nav { gap: 8px; } }
