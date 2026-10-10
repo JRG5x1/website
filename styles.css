@@ -158,3 +158,39 @@ nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 
 .header nav .portal-button span { margin: 0; }
 @media (max-width: 700px) { .header nav { gap: 14px; } .header nav .portal-button { min-height: 36px; padding: 7px 11px; } }
 @media (max-width: 380px) { .header nav { gap: 8px; } }
+
+/* Homepage commitments, privacy, and open-source sections. */
+.promise-section { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center; padding: 56px 0 72px; border-top: 1px solid var(--line); }
+.promise-copy h2 { font-size: clamp(42px, 5vw, 60px); line-height: 1.12; letter-spacing: -2px; margin: 20px 0 24px; }
+.promise-copy h2 span { color: var(--green); }
+.promise-copy > p:not(.eyebrow), .open-copy > p:not(.eyebrow) { color: var(--muted); font-size: 16px; line-height: 1.85; margin: 16px 0; }
+.free-statement { display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; padding: 40px 24px; min-height: 280px; background: radial-gradient(ellipse at center, #203728, #151b17 75%); border: 1px solid #395342; border-radius: 8px; }
+.free-value { font-size: clamp(88px, 10vw, 136px); line-height: 1; font-weight: 550; letter-spacing: -7px; color: var(--green); }
+.free-caption { font-size: 15px; margin-top: 24px; }
+.free-footnote { color: var(--muted); font-size: 12px; line-height: 1.7; margin-top: 12px; }
+.privacy-section { padding: 0 0 72px; }
+.section-intro { color: var(--muted); max-width: 760px; font-size: 16px; line-height: 1.85; margin: -4px 0 28px; }
+.privacy-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.data-card { padding: 30px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+.data-card-accent { border-color: #395342; }
+.data-card h3 { font-size: 25px; margin-top: 16px; }
+.data-list { list-style: none; margin: 26px 0 0; padding: 0; }
+.data-list li + li { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); }
+.data-list strong { display: block; font-size: 14px; font-weight: 600; }
+.data-list li > span { display: block; color: var(--muted); font-size: 14px; line-height: 1.85; margin-top: 9px; }
+.data-sale-promise { display: flex; align-items: center; gap: 22px; padding: 26px 30px; margin-top: 20px; border: 1px solid #395342; border-radius: 8px; background: #162219; }
+.privacy-mark { display: grid; place-items: center; flex: 0 0 42px; height: 42px; border: 1px solid #457354; border-radius: 50%; color: var(--green); font-size: 20px; }
+.data-sale-promise h3 { font-size: 22px; margin: 0; }
+.data-sale-promise p { color: var(--muted); font-size: 14px; line-height: 1.8; margin-top: 7px; }
+.open-section { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; padding: 56px 0 72px; border-top: 1px solid var(--line); }
+.open-copy h2 { font-size: 40px; line-height: 1.2; margin: 16px 0 24px; }
+.source-panel { background: var(--panel); border: 1px solid var(--line); padding: 28px; border-radius: 8px; }
+.source-links { margin-top: 14px; }
+.source-links > a { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 19px 0; border-bottom: 1px solid var(--line); font-size: 19px; font-weight: 550; }
+.source-links > a:last-child { border-bottom: 0; padding-bottom: 0; }
+.source-links > a > span:last-child { color: var(--muted); font-size: 12px; font-weight: 400; }
+.source-links > a:hover > span { color: var(--green); }
+.source-links > a > span:last-child > span { margin-left: 12px; }
+.home-questions { padding-bottom: 72px; }
+@media (max-width: 1000px) { .promise-section, .open-section { gap: 32px; } .data-card { padding: 24px; } .data-card h3 { font-size: 23px; } }
+@media (max-width: 700px) { .promise-section, .open-section, .privacy-grid { grid-template-columns: 1fr; } .promise-section, .open-section { gap: 28px; padding: 38px 0 48px; } .privacy-section, .home-questions { padding-bottom: 48px; } .free-statement { min-height: 230px; } .free-value { font-size: 100px; } .open-copy h2 { font-size: 34px; } .data-sale-promise { align-items: flex-start; gap: 16px; padding: 24px; } .data-sale-promise h3 { font-size: 20px; } .source-panel { padding: 24px; } }
