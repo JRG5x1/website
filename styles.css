@@ -50,9 +50,7 @@ h1 span { display: block; color: var(--green); }
 .orbit-inner { width: 76%; height: 76%; border-style: dashed; opacity: .55; }
 .orbit-point { position: absolute; right: 10%; top: 19%; width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
 .art-caption { font-size: 11px; letter-spacing: .6px; text-align: center; color: var(--muted); padding: 9px 0 1px; }
-.beetle-download { text-align: center; padding: 44px 24px; margin-bottom: 70px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
-.beetle-download h2 { margin-top: 12px; }
-.beetle-download > p:not(.eyebrow) { color: var(--muted); font-size: 16px; line-height: 1.7; margin-top: 16px; }
+
 .download-picker { position: relative; display: inline-flex; max-width: 100%; margin-top: 26px; text-align: left; color: #0d2015; background: var(--green); border-radius: 6px; }
 .download-main { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 60px; padding: 16px 22px; font-size: clamp(14px, 2.5vw, 17px); font-weight: 650; border-radius: 6px 0 0 6px; }
 .download-main img, .download-options img { flex-shrink: 0; }
@@ -67,7 +65,7 @@ h1 span { display: block; color: var(--green); }
 .download-options li a:hover, .download-options li a[aria-current="true"] { background: #253b2e; color: var(--green); }
 .download-options li img { padding: 3px; width: 30px; height: 30px; background: #eef1ec; border-radius: 4px; }
 .download-options small { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; }
-.beetle-download > .download-platforms { font-size: 13px; }
+
 .ecosystem { padding: 0 0 70px; }
 .section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 30px; }
 h2 { font-size: clamp(26px, 3vw, 34px); font-weight: 550; letter-spacing: -1.1px; line-height: 1.2; margin-top: 12px; }
