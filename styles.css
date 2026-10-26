@@ -1,4 +1,15 @@
 /* Self-contained, buildless styles for 5x1.com. */
+/* Privacy policy: readable measure, visible links, and wrapping contents. */
+.policy-updated { color: var(--muted); font-size: 13px; line-height: 1.6; margin-top: 20px; }
+.policy-toc { display: flex; flex-wrap: wrap; gap: 12px 24px; padding: 0 0 36px; }
+.policy-toc a, .policy-content a { text-decoration: underline; text-underline-offset: 4px; }
+.policy-content { padding-bottom: 42px; }
+.policy-content section { margin-bottom: 38px; scroll-margin-top: 32px; }
+.policy-content h2 { font-size: clamp(24px, 3vw, 30px); }
+.policy-content ul { padding-left: 24px; margin: 20px 0 28px; color: var(--muted); font-size: 16px; line-height: 1.85; }
+.policy-content li + li { margin-top: 16px; }
+.policy-content strong { color: var(--text); font-weight: 600; }
+.benefit-grid a { text-decoration: underline; text-underline-offset: 3px; }
 :root { color-scheme: dark; --bg: #111513; --panel: #161c18; --text: #eef1ec; --muted: #b0bbb2; --green: #29d780; --line: #303b33; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 32px; }
@@ -39,6 +50,24 @@ h1 span { display: block; color: var(--green); }
 .orbit-inner { width: 76%; height: 76%; border-style: dashed; opacity: .55; }
 .orbit-point { position: absolute; right: 10%; top: 19%; width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
 .art-caption { font-size: 11px; letter-spacing: .6px; text-align: center; color: var(--muted); padding: 9px 0 1px; }
+.beetle-download { text-align: center; padding: 44px 24px; margin-bottom: 70px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+.beetle-download h2 { margin-top: 12px; }
+.beetle-download > p:not(.eyebrow) { color: var(--muted); font-size: 16px; line-height: 1.7; margin-top: 16px; }
+.download-picker { position: relative; display: inline-flex; max-width: 100%; margin-top: 26px; text-align: left; color: #0d2015; background: var(--green); border-radius: 6px; }
+.download-main { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 60px; padding: 16px 22px; font-size: clamp(14px, 2.5vw, 17px); font-weight: 650; border-radius: 6px 0 0 6px; }
+.download-main img, .download-options img { flex-shrink: 0; }
+.download-main:hover { color: #0d2015; background: #66e7a6; }
+.download-options summary { display: grid; place-items: center; height: 100%; min-width: 48px; cursor: pointer; list-style: none; border-left: 1px solid #0d20154d; border-radius: 0 6px 6px 0; }
+.download-options summary::-webkit-details-marker { display: none; }
+.download-options summary:hover, .download-options[open] summary { background: #66e7a6; }
+.download-options summary:focus-visible { outline: 2px solid var(--text); outline-offset: 4px; }
+.download-options[open] summary svg { transform: rotate(180deg); }
+.download-options ul { position: absolute; top: calc(100% + 8px); left: 0; right: 0; z-index: 5; list-style: none; margin: 0; padding: 6px; background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 16px 36px #0006; }
+.download-options li a { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 4px; font-size: 14px; }
+.download-options li a:hover, .download-options li a[aria-current="true"] { background: #253b2e; color: var(--green); }
+.download-options li img { padding: 3px; width: 30px; height: 30px; background: #eef1ec; border-radius: 4px; }
+.download-options small { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; }
+.beetle-download > .download-platforms { font-size: 13px; }
 .ecosystem { padding: 0 0 70px; }
 .section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 30px; }
 h2 { font-size: clamp(26px, 3vw, 34px); font-weight: 550; letter-spacing: -1.1px; line-height: 1.2; margin-top: 12px; }
@@ -179,7 +208,9 @@ nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 
 .data-list strong { display: block; font-size: 14px; font-weight: 600; }
 .data-list li > span { display: block; color: var(--muted); font-size: 14px; line-height: 1.85; margin-top: 9px; }
 .data-sale-promise { display: flex; align-items: center; gap: 22px; padding: 26px 30px; margin-top: 20px; border: 1px solid #395342; border-radius: 8px; background: #162219; }
-.privacy-mark { display: grid; place-items: center; flex: 0 0 42px; height: 42px; border: 1px solid #457354; border-radius: 50%; color: var(--green); font-size: 20px; }
+.privacy-mark { display: grid; place-items: center; flex: 0 0 44px; height: 44px; border: 1px solid #467a59; border-radius: 50%; color: var(--green); background: linear-gradient(145deg, #254b34, #183222); box-shadow: inset 0 1px 0 #ffffff12, 0 3px 12px #0002; }
+.privacy-mark img { width: 24px; height: 24px; filter: invert(84%) sepia(34%) saturate(760%) hue-rotate(83deg) brightness(99%); }
+.section-intro strong { color: var(--text); font-weight: 600; }
 .data-sale-promise h3 { font-size: 22px; margin: 0; }
 .data-sale-promise p { color: var(--muted); font-size: 14px; line-height: 1.8; margin-top: 7px; }
 .open-section { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; padding: 56px 0 72px; border-top: 1px solid var(--line); }
