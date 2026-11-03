@@ -1,4 +1,6 @@
 /* Self-contained, buildless styles for 5x1.com. */
+/* Noto Sans is self-hosted (OFL, Latin subset) so every visitor sees the same type. */
+@font-face { font-family: "Noto Sans"; src: url("assets/NotoSans.woff2") format("woff2"); font-weight: 100 900; font-stretch: 62.5% 100%; font-display: swap; }
 /* Privacy policy: readable measure, visible links, and wrapping contents. */
 .policy-updated { color: var(--muted); font-size: 13px; line-height: 1.6; margin-top: 20px; }
 .policy-toc { display: flex; flex-wrap: wrap; gap: 12px 24px; padding: 0 0 36px; }
@@ -12,8 +14,9 @@
 .benefit-grid a { text-decoration: underline; text-underline-offset: 3px; }
 :root { color-scheme: dark; --bg: #111513; --panel: #161c18; --text: #eef1ec; --muted: #b0bbb2; --green: #29d780; --line: #303b33; }
 * { box-sizing: border-box; }
+button, input, select, textarea { font-family: inherit; }
 html { scroll-behavior: smooth; scroll-padding-top: 32px; }
-body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: "Noto Sans", sans-serif; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
 a:focus-visible { outline: 2px solid var(--green); outline-offset: 6px; border-radius: 3px; }
 a:hover { color: var(--green); }
