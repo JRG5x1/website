@@ -226,3 +226,24 @@ nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 
 .home-questions { padding-bottom: 72px; }
 @media (max-width: 1000px) { .promise-section, .open-section { gap: 32px; } .data-card { padding: 24px; } .data-card h3 { font-size: 23px; } }
 @media (max-width: 700px) { .promise-section, .open-section, .privacy-grid { grid-template-columns: 1fr; } .promise-section, .open-section { gap: 28px; padding: 38px 0 48px; } .privacy-section, .home-questions { padding-bottom: 48px; } .free-statement { min-height: 230px; } .free-value { font-size: 100px; } .open-copy h2 { font-size: 34px; } .data-sale-promise { align-items: flex-start; gap: 16px; padding: 24px; } .data-sale-promise h3 { font-size: 20px; } .source-panel { padding: 24px; } }
+/* Wi-Fi QR code tool: form beside the generated code(s), stacked on narrow screens. */
+.qr-tool { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+.qr-form { display: flex; flex-direction: column; padding: 28px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
+.qr-form label { margin: 18px 0 8px; font-size: 13px; font-weight: 600; }
+.qr-form label:first-child { margin-top: 0; }
+.qr-form input { width: 100%; min-height: 46px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 5px; background: var(--bg); color: var(--text); font-size: 16px; }
+.qr-form input:focus-visible, .qr-password button:focus-visible, .qr-static summary:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+.qr-password { display: flex; gap: 8px; }
+.qr-password button { min-width: 72px; border: 1px solid var(--line); border-radius: 5px; background: transparent; color: var(--text); font-size: 14px; cursor: pointer; }
+.qr-password button:hover { border-color: var(--green); }
+.qr-hint { margin: 8px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.qr-static { margin: 22px 0 4px; border-top: 1px solid var(--line); padding-top: 18px; }
+.qr-static summary { cursor: pointer; font-size: 14px; font-weight: 600; }
+.qr-form > .button { margin-top: 26px; }
+.qr-error { margin: 16px 0 0; color: #ff9b8a; font-size: 14px; line-height: 1.6; }
+.qr-output { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; align-content: center; min-height: 360px; padding: 28px; border: 1px dashed var(--line); border-radius: 6px; }
+.qr-empty { color: var(--muted); font-size: 14px; }
+.qr-code { margin: 0; text-align: center; }
+.qr-code svg { display: block; width: min(320px, 100%); height: auto; border-radius: 6px; background: #fff; }
+.qr-code figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; }
+@media (max-width: 800px) { .qr-tool { grid-template-columns: 1fr; gap: 28px; } .qr-output { min-height: 0; } }
