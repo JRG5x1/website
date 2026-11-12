@@ -247,13 +247,17 @@ nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 
 .qr-code svg { display: block; width: min(320px, 100%); height: auto; border-radius: 6px; background: #fff; }
 .qr-code figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; }
 @media (max-width: 800px) { .qr-tool { grid-template-columns: 1fr; gap: 28px; } .qr-output { min-height: 0; } }
-/* Testimonials: each <figure class="testimonial"> is one owner; the list lays out however many there are. */
+/* Testimonials: each <figure class="testimonial"> is one owner's card; the whole card is a link. */
 .testimonials { padding: 0 0 70px; }
 .testimonial-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; }
-.testimonial { margin: 0; padding: 28px; background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 6px; display: flex; flex-direction: column; gap: 22px; }
+.testimonial { margin: 0; display: flex; }
+.testimonial > a { flex: 1; display: flex; flex-direction: column; gap: 22px; padding: 28px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; color: inherit; transition: border-color .15s; }
+.testimonial > a:hover, .testimonial > a:focus-visible { border-color: var(--green); color: inherit; outline-offset: 2px; }
 .testimonial blockquote { margin: 0; }
 .testimonial blockquote p { margin: 0; color: var(--text); font-size: 16px; line-height: 1.85; }
-.testimonial figcaption { margin-top: auto; display: flex; flex-direction: column; gap: 4px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.testimonial figcaption { margin-top: auto; display: flex; align-items: center; gap: 14px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.testimonial figcaption img { width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--line); flex: none; }
+.testimonial figcaption > span { display: flex; flex-direction: column; }
 .testimonial figcaption strong { color: var(--text); font-size: 15px; font-weight: 600; }
-.testimonial figcaption a { text-decoration: underline; text-underline-offset: 4px; }
-@media (max-width: 700px) { .testimonials { padding-bottom: 48px; } .testimonial-list { grid-template-columns: 1fr; } .testimonial { padding: 22px; } }
+.testimonial > a:hover figcaption > span > span { color: var(--green); }
+@media (max-width: 700px) { .testimonials { padding-bottom: 48px; } .testimonial-list { grid-template-columns: 1fr; } .testimonial > a { padding: 22px; } }
