@@ -264,5 +264,17 @@ nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 
 .testimonial-watch { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; margin-top: 2px; padding: 7px 13px; border: 1px solid #395342; border-radius: 999px; color: var(--green); font-size: 12px; font-weight: 600; letter-spacing: .3px; }
 .testimonial-watch > span { font-size: 9px; }
 .testimonial > a:hover .testimonial-watch { background: var(--green); color: #0d2015; border-color: var(--green); }
+/* Long testimonials start at the height of the others; the green "More..." (a label for a hidden checkbox) opens them. Narrow screens show everything. */
+.testimonial-toggle { position: absolute; opacity: 0; pointer-events: none; }
+.testimonial-more { display: none; align-self: flex-start; margin-top: 2px; padding: 7px 0; color: var(--green); font-size: 13px; font-weight: 600; cursor: pointer; }
+.testimonial-more:hover { text-decoration: underline; }
+.testimonial-toggle:focus-visible ~ .testimonial-more { outline: 2px solid var(--green); outline-offset: 4px; border-radius: 4px; }
+/* Side by side (two columns): a closed long card takes exactly the height of its row, and its words fade out at the bottom. */
+@media (min-width: 774px) {
+  .testimonial:has(.testimonial-toggle:not(:checked)) { align-self: stretch; position: relative; min-height: 320px; }
+  .testimonial:has(.testimonial-toggle:not(:checked)) > div { position: absolute; inset: 0; }
+  .testimonial-toggle:not(:checked) ~ blockquote { flex: 1; min-height: 0; overflow: hidden; -webkit-mask-image: linear-gradient(#000 calc(100% - 40px), transparent); mask-image: linear-gradient(#000 calc(100% - 40px), transparent); }
+  .testimonial-toggle:not(:checked) ~ .testimonial-more { display: inline-block; }
+}
 @media (prefers-reduced-motion: reduce) { .testimonial > :is(a, div) { transition: none; } .testimonial > a:hover { transform: none; } }
 @media (max-width: 700px) { .testimonials { padding-bottom: 48px; } .testimonial > :is(a, div) { padding: 24px 22px 22px; } }
