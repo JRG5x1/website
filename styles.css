@@ -251,9 +251,9 @@ nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 
 .testimonials { padding: 0 0 70px; }
 .testimonial-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 14px; align-items: start; }
 .testimonial { margin: 0; max-width: 760px; }
-.testimonial > a { position: relative; display: flex; flex-direction: column; gap: 20px; padding: 30px 30px 26px; border: 1px solid var(--line); border-radius: 10px; color: inherit; overflow: hidden;
+.testimonial > :is(a, div) { position: relative; display: flex; flex-direction: column; gap: 20px; padding: 30px 30px 26px; border: 1px solid var(--line); border-radius: 10px; color: inherit; overflow: hidden;
   background: radial-gradient(ellipse at top left, #1c3023 0%, #161c18 62%); transition: border-color .15s, transform .15s; }
-.testimonial > a::before { content: "\201C"; position: absolute; top: 2px; right: 24px; font-size: 120px; line-height: 1; font-weight: 700; color: var(--green); opacity: .16; pointer-events: none; }
+.testimonial > :is(a, div)::before { content: "\201C"; position: absolute; top: 2px; right: 24px; font-size: 120px; line-height: 1; font-weight: 700; color: var(--green); opacity: .16; pointer-events: none; }
 .testimonial > a:hover, .testimonial > a:focus-visible { border-color: var(--green); color: inherit; transform: translateY(-2px); outline-offset: 2px; }
 .testimonial figcaption { display: flex; align-items: center; gap: 14px; color: var(--muted); font-size: 13px; line-height: 1.5; }
 .testimonial figcaption img { width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--green); flex: none; }
@@ -264,5 +264,5 @@ nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 
 .testimonial-watch { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; margin-top: 2px; padding: 7px 13px; border: 1px solid #395342; border-radius: 999px; color: var(--green); font-size: 12px; font-weight: 600; letter-spacing: .3px; }
 .testimonial-watch > span { font-size: 9px; }
 .testimonial > a:hover .testimonial-watch { background: var(--green); color: #0d2015; border-color: var(--green); }
-@media (prefers-reduced-motion: reduce) { .testimonial > a { transition: none; } .testimonial > a:hover { transform: none; } }
-@media (max-width: 700px) { .testimonials { padding-bottom: 48px; } .testimonial > a { padding: 24px 22px 22px; } }
+@media (prefers-reduced-motion: reduce) { .testimonial > :is(a, div) { transition: none; } .testimonial > a:hover { transform: none; } }
+@media (max-width: 700px) { .testimonials { padding-bottom: 48px; } .testimonial > :is(a, div) { padding: 24px 22px 22px; } }
